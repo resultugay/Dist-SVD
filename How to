@@ -6,4 +6,12 @@
    add this at the end of line 
      source /opt/intel/bin/compilervars.sh intel64
 5) compile your file as below:
-  gcc test.c -o test -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lm -lpthread
+  gcc client.c -o client -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lm -lpthread
+  gcc server.c -o server
+
+6) To execute : 
+    ./server <input_file> <Number of Workers>
+    ./client
+
+    ./server mapped.txt 2
+    ./client
