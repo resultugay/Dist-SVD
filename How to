@@ -1,0 +1,9 @@
+1) download intel math kernel library from https://software.intel.com/en-us/mkl
+2) extract it using tar –xvzf <install_package>.tgz
+3) ./install.sh or ./install_GUI.sh
+ a) you can get an error about cpio, you can install this by sudo apt-get install cpio
+4)sudo gedit ~/.bashrc
+   add this at the end of line 
+     source /opt/intel/bin/compilervars.sh intel64
+5) compile your file as below:
+  gcc test.c -o test -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lm -lpthread
